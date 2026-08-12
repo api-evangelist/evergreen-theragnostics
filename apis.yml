@@ -1,7 +1,16 @@
 aid: evergreen-theragnostics
 name: Evergreen Theragnostics
-description: 'Evergreen Theragnostics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Evergreen Theragnostics is a Springfield, New Jersey radiopharmaceutical company
+  founded in 2019 that operates a cGMP contract development and manufacturing organization
+  (CDMO) for therapeutic and diagnostic radiopharmaceuticals, alongside its own clinical
+  pipeline of theragnostic pairs including the OCTEVY PET diagnostic imaging agent for
+  neuroendocrine tumors. Its 14,000 square foot Springfield facility carries seven commercial-scale
+  production suites, sterility lines, quality control and packaging space serving radioligand
+  therapy developers. Lantheus Holdings completed its acquisition of the company on April 1,
+  2025, and Evergreen now operates as part of Lantheus. The company sells manufacturing
+  services and drug products, not software: it publishes no developer program, no public API,
+  and no machine-readable specifications.'
+image: https://www.evergreentgn.com/wp-content/uploads/evergreen-theragnostics-og-img.jpg
 url: https://raw.githubusercontent.com/api-evangelist/evergreen-theragnostics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,14 @@ created: '2026-08-12'
 modified: '2026-08-12'
 tags:
 - Company
+- Health Care
+- Pharmaceuticals
+- Life Sciences
+- Manufacturing
+- Radiopharmaceuticals
+- Oncology
+- Contract Manufacturing
+- Medical Imaging
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,48 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/evergreen-theragnostics-domain-security.yml
 - type: Website
+  url: https://www.evergreentgn.com/
+- type: About
+  url: https://www.evergreentgn.com/about-us/
+- type: Blog
+  url: https://www.evergreentgn.com/news/
+- type: BlogRSS
+  url: https://www.evergreentgn.com/feed/
+- type: PrivacyPolicy
+  url: https://www.evergreentgn.com/privacy-policy
+- type: TermsOfService
+  url: https://www.evergreentgn.com/terms-of-use
+- type: LinkedIn
+  url: https://www.linkedin.com/company/evergreentgn
+- type: SecondaryMarket
   url: https://forgeglobal.com/evergreen-theragnostics_stock/
+x-acquired-by:
+  company: Lantheus Holdings, Inc.
+  date: '2025-04-01'
+  source: https://lantheusholdings.gcs-web.com/news-releases/news-release-details/lantheus-completes-acquisition-evergreen-theragnostics
+x-enrichment:
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Evergreen Theragnostics is a cGMP radiopharmaceutical CDMO and drug developer whose
+    product is manufactured radioligand doses, not software — its six-page WordPress
+    marketing site has no developer, docs, or api subdomain (all three fail to resolve in
+    DNS), no GitHub organization, and every /.well-known/ path returns the theme 404 page.
+  evidence:
+  - url: https://www.evergreentgn.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.evergreentgn.com/openapi.json
+    status: 404
+  - url: https://www.evergreentgn.com/llms.txt
+    status: 404
+  - url: https://api.github.com/orgs/evergreentgn
+    status: 404
+  checked: '2026-08-12'

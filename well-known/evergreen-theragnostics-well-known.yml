@@ -1,0 +1,28 @@
+generated: '2026-08-12'
+method: probed
+source: live GET probes of the /.well-known/ discovery surface on evergreentgn.com
+host: https://www.evergreentgn.com
+note: >-
+  Every /.well-known/ path probed returned HTTP 404. The site is a WordPress marketing
+  site for a radiopharmaceutical CDMO; it serves no discovery documents. No WellKnown or
+  SecurityTxt pointer is wired in apis.yml because nothing was found — this file records
+  a verified absence, not a served surface. The 404 bodies are the theme's HTML 404 page,
+  not documents.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+apex_probes:
+- url: https://evergreentgn.com/.well-known/security.txt
+  status: 404
