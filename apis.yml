@@ -10,6 +10,17 @@ description: 'Evergreen Theragnostics is a Springfield, New Jersey radiopharmace
   2025, and Evergreen now operates as part of Lantheus. The company sells manufacturing
   services and drug products, not software: it publishes no developer program, no public API,
   and no machine-readable specifications.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.evergreentgn.com/wp-content/uploads/evergreen-theragnostics-og-img.jpg
 url: https://raw.githubusercontent.com/api-evangelist/evergreen-theragnostics/refs/heads/main/apis.yml
 x-type: company
